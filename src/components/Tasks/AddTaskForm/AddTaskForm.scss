@@ -1,0 +1,72 @@
+.tasks__form {
+    margin-top: 20px;
+    cursor: pointer;
+
+    &_new {
+        display: flex;
+        align-items: center;
+        opacity: 0.4;
+
+        &:hover {
+            opacity: 0.8;
+            transition: opacity 0.2s ease-in-out;
+        }
+
+        img {
+            width: 18px;
+            height: 18px;
+            margin-left: 4px;
+        }
+        span {
+            font-size: 16px;
+            margin-left: 18px;
+        }
+    }
+    &_block {
+        display: flex;
+        justify-content: space-between;
+        .button {
+            background: #4dd599;
+            border-radius: 4px;
+            color: #fff;
+            border: 0;
+            padding: 10px 20px;
+            width: 100%;
+            margin: 0 20px;
+            margin-top: 20px;
+            font-size: 14px;
+
+            &:disabled {
+                background: rgb(243, 243, 243) !important;
+                color: rgb(255, 248, 248) !important;
+
+            }
+
+            &:hover {
+                background: darken($color: #4dd599, $amount: 6%);
+                cursor: pointer;
+            }
+
+            &:active {
+                background: rgb(241, 241, 241);
+                color: #4dd599;
+            }
+            &--gray {
+                background: rgb(255, 108, 108);
+                color: #fff;
+                &:hover {
+                    background: darken($color: rgb(255, 108, 108), $amount: 6%);
+                    cursor: pointer;
+                }
+                &:active {
+                    background: rgb(241, 241, 241);
+                    color: #d56d4d;
+                }
+            }
+        }
+    }
+    .field {
+        margin-top: 20px;
+        font-size: 14px;
+    }
+}

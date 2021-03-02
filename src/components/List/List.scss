@@ -1,0 +1,75 @@
+.list {
+    $self: &;
+    margin-bottom: 30px;
+
+    li {
+        display: flex;
+        align-items: center;
+        padding: 10px 12px;
+        cursor: pointer;
+        height: 20px;
+        margin: 5px;
+
+        &:hover #{$self}__remove-icon {
+            opacity: 0.3;
+            transition: opacity 0.2s ease-in-out;
+        }
+
+        #{$self}__remove-icon {
+            opacity: 0;
+
+            &:hover {
+                opacity: 1;
+                color: red;
+                transition: opacity 0.2s ease-in-out;
+            }
+        }
+
+        span {
+            flex: 1;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            width: 160px;
+            white-space: nowrap;
+            
+        }
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        &.active {
+            background: #ffffff;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+            border-radius: 4px;
+        }
+
+        .badge {
+            position: relative;
+        }
+
+        i {
+            display: inline-flex;
+            margin: 8px;
+
+            img {
+                opacity: 0.3;
+            }
+        }
+
+        .item_name {
+            margin-left: 5px;
+        }
+    }
+    &__add-list {
+        span {
+            opacity: 0.5;
+        }
+        &:hover {
+            span,
+            img {
+                opacity: 1;
+            }
+        }
+    }
+}
